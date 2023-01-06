@@ -3,7 +3,7 @@ import shutil
 import click
 from bumpver.cli import update
 from build.__main__ import main as build
-from tox.session import main as tox
+from tox.run import main as tox
 from twine.commands.check import main as check
 from twine.commands.upload import main as upload
 
