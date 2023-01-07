@@ -3,7 +3,7 @@ name = "pybaserepo"
 version = "0.2.0"
 description = "base repo config"
 authors = [
-    "Ivan Lamperti ivan.lamperti.work@gmail.com"
+    "Ivan Lamperti <ivan.lamperti.work@gmail.com>"
 ]
 license = "LICENSE"
 readme = "README.md"
