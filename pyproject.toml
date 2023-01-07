@@ -1,46 +1,34 @@
-[project]
+[tool.poetry]
 name = "pybaserepo"
-description = "A python package to enforce correctness of configuration values"
+version = "0.1.0"
+description = "base repo config"
 authors = [
-    { name = "Ivan Lamperti", email = "ivan.lamperti.work@gmail.com" }
+    "Ivan Lamperti ivan.lamperti.work@gmail.com"
 ]
-version = "0.0.17"
-license = { file = "LICENSE" }
+license = "LICENSE"
 readme = "README.md"
-requires-python = ">=3.10"
-keywords = ["configuration"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha"
 ]
-dependencies = [
-    "click"
-]
 
-[project.optional-dependencies]
-dev = [
-    "tox~=4.2.0",
-    "bumpver",
-    "pip-tools",
-    "twine"
-]
-test = [
-    "check-manifest",
-    "pytest",
-    "pytest-cov",
-    "flake8"
-]
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.3"
 
-[project.urls]
-homepage = "https://github.com/odococo/pybaserepo"
-documentation = "https://github.com/odococo/pybaserepo"
-repository = "https://github.com/odococo/pybaserepo"
+[tool.poetry.group.dev.dependencies]
+tox = "~=4.2.0"
+bumpver = "^2022.1120"
 
-[project.scripts]
-validator = "pybaserepo.__main__:main"
+
+[tool.poetry.group.test.dependencies]
+check-manifest = "^0.49"
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+flake8 = "^6.0.0"
 
 [build-system]
-requires = ["setuptools>=43.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver.file_patterns]
 "pyproject.toml" = [
@@ -49,7 +37,7 @@ build-backend = "setuptools.build_meta"
 ]
 
 [tool.bumpver]
-current_version = "0.0.17"
+current_version = "0.1.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "Bump version {old_version} -> {new_version}"
 commit          = true
