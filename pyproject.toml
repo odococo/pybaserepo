@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pybaserepo"
-version = "0.2.0"
+version = "0.2.1"
 description = "base repo config"
 authors = [
     "Ivan Lamperti <ivan.lamperti.work@gmail.com>"
@@ -37,7 +37,7 @@ build-backend = "poetry.core.masonry.api"
 ]
 
 [tool.bumpver]
-current_version = "0.2.0"
+current_version = "0.2.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "Bump version {old_version} -> {new_version}"
 commit          = true
